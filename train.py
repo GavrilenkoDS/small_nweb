@@ -11,7 +11,7 @@ IMG_WIDTH = 200
 train_datagen = ImageDataGenerator(rescale=1./255)
 
 train_data = train_datagen.flow_from_directory(
-    r'C:\Users\Dmitrii\Desktop\neuro_data\train',
+    r'train',
     target_size=(IMG_HEIGHT, IMG_WIDTH),
     batch_size=4,
     class_mode='binary')
@@ -38,5 +38,5 @@ model.compile(optimizer='adam',
 model.fit(train_data, epochs=1)
 
 
-model.save(r'C:\Users\Dmitrii\Desktop\neuro_data\model.h5')
+model.save(r'model.h5')
 
