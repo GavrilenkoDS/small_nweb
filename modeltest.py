@@ -5,15 +5,15 @@ from tensorflow.keras.models import load_model
 import os
 import pandas as pd
 
-DIR_IMAGES = r'C:\Users\Dmitrii\Desktop\neuro_data\test'
+DIR_IMAGES = r'--Your Dir'
 
-img1 = '0000c1e9d28641fdbdcdff4f8dbef007.jpeg'
-img2 = '000bd620a622438fb0b2e13100632e70.png'
-img3 = '000d68785e7047a988c1f243f4a671b5.png'
-img4 = '000dc6558648454cbf0b27469d1748e6.jpeg'
+img1 = 'img1.jpeg'
+img2 = 'img2.png'
+img3 = 'img2.png'
+img4 = 'img2.jpeg'
 
 # Загружаем обученную модель
-model = load_model(r'C:\Users\Dmitrii\Desktop\neuro_data\model.h5')
+model = load_model(r'--Your Model.h5')
 
 def predict(img_path):
     # Загружаем изображение и приводим его к нужному размеру
@@ -47,11 +47,11 @@ def predict(img_path):
 
 dat = []
 
-for filename in os.listdir(r'C:\Users\Dmitrii\Desktop\neuro_data\test'):
+for filename in os.listdir(r'--Some tests'):
     filename = os.path.join(DIR_IMAGES,filename)
     
     dat.append([filename, predict(filename)])
 
 df = pd.DataFrame(dat)
-df.to_csv(r'C:\Users\Dmitrii\Desktop\neuro_data\results.csv')
+df.to_csv(r'Results.csv')
 
