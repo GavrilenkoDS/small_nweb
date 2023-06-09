@@ -9,7 +9,7 @@ def get_pd_df(root):
     return df 
 
 
-mydf = get_pd_df(r"C:\Users\Dmitrii\Desktop\neuro_data\test.csv")
+mydf = get_pd_df(r"test.csv")
 
 print (mydf)
 
@@ -32,8 +32,8 @@ print (pics)
 #hand - 1
 
 
-rootpathpic = r"C:\Users\Dmitrii\Desktop\neuro_data\imgs"
-trainpathmachine = r"C:\Users\Dmitrii\Desktop\neuro_data\test"
+rootpathpic = r"imgs"
+trainpathmachine = r"test"
 
 
 
